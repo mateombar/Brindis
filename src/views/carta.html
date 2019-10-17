@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carta</title>
+    <% include partials/static-head.html%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <% include partials/navigation.html%>
+    <div class="container">
+        <div class="row">
+            <!--FORM-->
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/find" method="post">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Sitio de Interés</label>
+                            </div>
+                            <div class="form-group">
+                                <input id="fres" type="checkbox" value="" name="Restaurante" onclick="check2()">
+                                Restaurante<br>
+                                <input id="fent" type="checkbox" value="" name="Entretenimiento" onclick="check2()">
+                                Entretenimiento<br>
+                                <input id="fbar" type="checkbox" value="" name="Bar" onclick="check2()"> Bar<br>
+                                <input id="fcof" type="checkbox" value="" name="Coffee" onclick="check2()">
+                                Cafe<br>
+                            </div>
+                            <button class="btn btn-primary" type="submit">
+                                Buscar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIST -->
+            <div class="col-md-7">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Etiquetas</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+
+                        <tr>
+                            <td><% l_array.title %></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    
+    <% include partials/footer.html%>
+    <script src="Js/check.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% include partials/static-head.html%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <% include partials/navigation.html%>
+    <div class="general-container">
+        <!--FORM
+        <div class="findData">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="/find" method="post">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Sitio de Interés</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="findRes" type="checkbox" value="" name="restaurant"  onclick="check()">
+                                         Restaurante<br>
+                                        <input id="findEnt" type="checkbox" value="" name="entertainment"
+                                            onclick="check()"> Entretenimiento<br>
+                                        <input id="findBar" type="checkbox" value="" name="bar" onclick="check()"> Bar<br>
+                                        <input id="findCof" type="checkbox" value="" name="coffee" onclick="check()">
+                                        Cafe<br>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">
+                                        Buscar
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        -->
+        <div class="saveData">
+            <div class="container">
+                <div class="row">
+                    <!--FORM-->
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="/add" method="post">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="title" placeholder="Title">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="description" cols="80"
+                                            placeholder="Add a Description"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="restaurant" type="checkbox" value="" name="restaurant"
+                                            onclick="check()"> Restaurante<br>
+                                        <input id="entertainment" type="checkbox" value="" name="entertainment"
+                                            onclick="check()"> Entretenimiento<br>
+                                        <input id="bar" type="checkbox" value="" name="bar" onclick="check()"> Bar<br>
+                                        <input id="coffee" type="checkbox" value="" name="coffee" onclick="check()">
+                                        Cafe<br>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">
+                                        Agregar
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LIST -->
+                    <div class="col-md-7">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Titulo</th>
+                                    <th>Descripcion</th>
+                                    <th>Etiquetas</th>
+                                    <th>Operaciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    
+
+                                <% for(var i = 0; i < business.length; i++){ %>
+                                <tr>
+                                    <td><%= i + 1 %></td>
+                                    <td><%= business[i].title %></td>
+                                    <td><%= business[i].description %></td>
+                                    <td>
+                                        <%= business[i].restaurant%><br>
+                                        <%= business[i].entertainment%><br>
+                                        <%= business[i].bar%><br>
+                                        <%= business[i].coffee%><br>
+                                    </td>
+                                    <td>
+                                        <a href="/delete/<%= business[i]._id %>" class="btn btn-dark">Eliminar</a>
+                                        <a href="/edit/<%= business[i]._id %>" class="btn btn-info">Editar</a>
+                                    </td>
+
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include partials/footer.html%>
+    <script src="Js/check.js"></script>
+</body>
+
+</html>

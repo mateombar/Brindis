@@ -1,0 +1,74 @@
+/*  footer  */
+footer{
+    background: #fff;
+}
+.footer-container {
+    margin-top:4%;
+    width: 90%;
+    position: relative;
+}
+.row-container{
+    width: 100%;
+    text-align: center;
+}
+.row-container h3{
+    margin-left: 5%;
+}
+.row-container .icon{
+    margin-left: 50px;
+}
+.footer-container .row{
+    width: 100%;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.footer-container .column{
+    margin-left: 8%;
+    float: left;
+    width: 17%;
+}
+.footer-container .column a{
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    color:#000;
+}
+.column a:hover{
+    text-decoration: underline;
+}
+.footer-container .column p{
+    display: block;
+    line-height: 20px;
+}
+.footer-container .column .cImg{
+    margin-right: 15px;
+}
+.sub-footer-container {
+    margin-top: 1%;
+    margin-left: 10%;
+}
+.sub-footer-container hr{
+    width: 100%;
+}
+.sub-footer-container p{
+    margin-left: 15px;
+}
+.sub-footer-container .img{
+    margin-right: 10px;
+}
+
+@media(max-width: 1200px){
+
+    .footer-container .column{
+        margin-left: 22%;
+        float: left;
+        width: 26%;
+    }
+    .footer-container .column a{
+        display: block;
+        line-height: 30px;
+        text-decoration: none;
+        color:#000;
+    }
+}
+
