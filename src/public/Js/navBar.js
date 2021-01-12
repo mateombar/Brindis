@@ -16,20 +16,20 @@ $(window).on("scroll", function() {
 });
 
 //Card Efect
-$(document).read(function () {
-   $('.col-4-lg').hover(
-       //Trigger when mouse hover
-       function () {
-           $(this).animate({
-               marginTop: "-=10%"
-           },200);
-       },
-       //Trigger when mouse out
-       function () {
-           $(this).animate({
-               marginTop: "0%"
-           },200);
-       }
-   );
+// $(document).read(function () {
+//    $('.col-4-lg').hover(
+//        //Trigger when mouse hover
+//        function () {
+//            $(this).animate({
+//                marginTop: "-=10%"
+//            },200);
+//        },
+//        //Trigger when mouse out
+//        function () {
+//            $(this).animate({
+//                marginTop: "0%"
+//            },200);
+//        }
+//    );
 
-});
+// });

@@ -12,7 +12,7 @@ mongoose.connect('mongodb://mongodb+srv://brindis:<brindissies>@cluster0-wyxdg.m
 const indexRoutes = require('./routes/index-routes.js')
 
 //settings
-app.set('port', process.env.PORT || 3000); // A la constante port le agrego el puerto
+app.set('port', process.env.PORT || 2000); // A la constante port le agrego el puerto
 app.set('views',path.join(__dirname,'views')); 
 app.set('view engine', 'ejs')// what template engine I'm going to use
 app.engine('html', require('ejs').renderFile); //render file from html to ejs
