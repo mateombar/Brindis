@@ -43,12 +43,22 @@ footer{
 .footer-container .column .cImg{
     margin-right: 15px;
 }
+.footer-container .column .github{
+    width: 20px;
+}
 .sub-footer-container {
     margin-top: 1%;
     margin-left: 10%;
 }
 .sub-footer-container hr{
     width: 100%;
+}
+.sub-footer-container .description{
+    margin-left: 15px;
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.7rem;
+    color: rgb(31, 31, 31);
 }
 .sub-footer-container p{
     margin-left: 15px;
